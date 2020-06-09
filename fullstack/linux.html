@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <script>
+    window.themeRuntime = {
+      root: "/labixiaoliu.github.io/",
+      scriptsMap: {},
+      init: {
+        status: false
+      },
+      commentRest: {
+        status: false
+      },
+      versions: {
+        theme: "2.1.0",
+        mdui: "0.4.0",
+        fetch: "3.0.0",
+        es6promise: "4.2.5+7f2b526d",
+        lightgallery: "1.0.1",
+        smoothscroll: "15.2.0"
+      }
+      
+    };
+    console.info("%cCopyright © 2018 - " + new Date().getFullYear() +" Halyul\n"+'Theme Version: ' + themeRuntime.versions.theme +'%c\nhttps://github.com/Halyul/hexo-theme-mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+  </script>
+  <!--
+        © HEXO MDUI Theme
+        https://github.com/Halyul/hexo-theme-mdui
+        -->
+
+  <meta charset="UTF-8">
+  <title> - 蜡笔小六博客屋</title>
+
+  <!-- Favicons -->
+  <link rel="icon shortcut" type="image/ico" href="/labixiaoliu.github.io/images/favicon.png">
+  <link rel="icon" sizes="192x192" href="/labixiaoliu.github.io/images/favicon.png">
+  <link rel="apple-touch-icon" href="/labixiaoliu.github.io/images/favicon.png">
+
+  <!-- Meta & Info -->
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="theme-color" content="#fff">
+
+  <meta name="author" content="Damon Chen">
+  
+  <meta name="keywords" content="blog, hexo, mdui">
+
+  <!--iOS -->
+  <meta name="apple-mobile-web-app-title" content="蜡笔小六博客屋">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://labixiaolliu.github.io">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content=" - 蜡笔小六博客屋 | 蜡笔小六博客屋">
+  <meta property="og:image" content="/images/favicon.png" />
+  
+
+  
+
+  
+
+  <!-- Import CSS -->
+  
+    
+<link rel="stylesheet" href="/labixiaoliu.github.io/css/mdui.css">
+
+  
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body class="mdui-drawer-body-left mdui-theme-primary-indigo mdui-theme-accent-pink">
+
+  <style>
+    #spinner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          opacity: 1;
+      -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+          transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+    }
+    main {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+      transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+      display: none;
+    }
+  </style>
+  <div id="spinner">
+    <style>
+      .spinner {
+
+      -webkit-animation: rotator 1.4s linear infinite;
+              animation: rotator 1.4s linear infinite;
+      }
+
+      @-webkit-keyframes rotator {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+      }
+      }
+
+      @keyframes rotator {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+      }
+      }
+
+      .path {
+      stroke-dasharray: 187;
+      stroke-dashoffset: 0;
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+              animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+      }
+
+      @-webkit-keyframes colors {
+      0% {
+        stroke: #4285F4;
+      }
+      25% {
+        stroke: #DE3E35;
+      }
+      50% {
+        stroke: #F7C223;
+      }
+      75% {
+        stroke: #1B9A59;
+      }
+      100% {
+        stroke: #4285F4;
+      }
+      }
+
+      @keyframes colors {
+      0% {
+        stroke: #4285F4;
+      }
+      25% {
+        stroke: #DE3E35;
+      }
+      50% {
+        stroke: #F7C223;
+      }
+      75% {
+        stroke: #1B9A59;
+      }
+      100% {
+        stroke: #4285F4;
+      }
+      }
+
+      @-webkit-keyframes dash {
+      0% {
+        stroke-dashoffset: 187;
+      }
+      50% {
+        stroke-dashoffset: 46.75;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+      }
+      100% {
+        stroke-dashoffset: 187;
+        -webkit-transform: rotate(450deg);
+                transform: rotate(450deg);
+      }
+      }
+
+      @keyframes dash {
+      0% {
+        stroke-dashoffset: 187;
+      }
+      50% {
+        stroke-dashoffset: 46.75;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+      }
+      100% {
+        stroke-dashoffset: 187;
+        -webkit-transform: rotate(450deg);
+                transform: rotate(450deg);
+      }
+      }
+    </style>
+    <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+  </div>
+
+  <main>
+    <div class="mdui-appbar mdui-appbar-fixed mdui-color-white mdui-shadow-0 theme-appbar">
+  <div class="mdui-toolbar theme-toolbar-top">
+    
+      <a href="/labixiaoliu.github.io/" class="mdui-btn mdui-btn-icon mdui-ripple theme-appbar__burger theme-appbar__burger--arrow">
+        <i class="mdui-icon">
+          <span></span>
+        </i>
+      </a>
+    
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple theme-appbar__mode-switch">
+      <i class="mdui-icon material-icons  theme-appbar__bright-mode">&#xe1ac;</i>
+      <i class="mdui-icon material-icons  theme-appbar__dark-mode" style="display: none;">&#xe3a7;</i>
+    </a>
+  </div>
+  <div class="mdui-toolbar theme-toolbar-bottom">
+    <span class="theme-toolbar-bottom__title">蜡笔小六博客屋</span>
+    
+      <a href="/labixiaoliu.github.io/search.html" class="mdui-textfield-icon mdui-btn mdui-btn-icon theme-toolbar-bottom__search">
+        <i class="mdui-icon material-icons">&#xe8b6;</i>
+      </a>
+    
+  </div>
+  <div class="mdui-progress theme-appbar__progress" id="progressBar">
+    <div class="mdui-progress-indeterminate"></div>
+  </div>
+</div>
+
+    <div class="mdui-drawer mdui-drawer-full-height theme-drawer" id="drawer">
+  <!-- header -->
+  <div class="theme-drawer__header">
+  <div class="theme-drawer__header__layer-1">
+    <div class="mdui-toolbar theme-toolbar-top">
+      
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple theme-appbar__burger theme-appbar__burger--drawer theme-appbar__burger--arrow" id="drawer-back">
+          <i class="mdui-icon">
+            <span></span>
+          </i>
+        </a>
+      
+    </div>
+    <div class="mdui-toolbar theme-toolbar-bottom">
+      <span class="theme-toolbar-bottom__title">蜡笔小六博客屋</span>
+    </div>
+  </div>
+  <div class="theme-drawer__header__layer-2" style="background-image: url(/labixiaoliu.github.io/images/bg.png)">
+    <img class="mdui-img-circle theme-drawer__header__layer-2__user__avatar" src="/labixiaoliu.github.io/images/avatar.jpg"/>
+    <div class="theme-drawer__header__layer-2__user__info">
+      <div class="theme-drawer__header__layer-2__user__info__author mdui-text-color-white-text">
+        Damon Chen
+      </div>
+      <div class="theme-drawer__header__layer-2__user__info__slogan mdui-text-color-white-secondary">
+        Day Day Up!
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="theme-drawer__warpper">
+    <!-- content -->
+    <div class="theme-drawer__warpper__content">
+  <ul class="mdui-list">
+    <a href="/labixiaoliu.github.io/" class="mdui-list-item mdui-ripple mdui-ripple-white">
+      <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+      <div class="mdui-list-item-content">Index</div>
+    </a>
+    <a href="/labixiaoliu.github.io/archives/" class="mdui-list-item mdui-ripple mdui-ripple-white">
+      <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+      <div class="mdui-list-item-content">Archives</div>
+    </a>
+    <ul class="mdui-list mdui-collapse" mdui-collapse="{accordion: true}" mdui-collapse>
+      
+      
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple mdui-ripple-white">
+          <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+          <div class="mdui-list-item-content">Years</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+          
+            <a href="/labixiaoliu.github.io/archives/2020/" class="mdui-list-item mdui-ripple">
+              2020
+            </a>
+          
+        </div>
+      </div>
+    </ul>
+  </ul>
+  
+    <div class="mdui-divider"></div>
+    <ul class="mdui-list" mdui-collapse="{accordion: true}" mdui-collapse>
+      
+        
+          
+            <a href="/labixiaoliu.github.io/api/study.html" target="_self" class="mdui-list-item mdui-ripple mdui-ripple-white">
+          
+              
+              
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe0ba;</i>
+              
+              
+              <div class="mdui-list-item-content">汇总</div>
+            </a>
+        
+      
+        
+          <div class="mdui-collapse-item">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple mdui-ripple-white">
+              
+              
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+              
+              
+              <div class="mdui-list-item-content">全栈学习</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                
+                  <a href="/labixiaoliu.github.io/api/linux.html" class="mdui-list-item mdui-ripple mdui-ripple-white" target="_self">
+                
+                    linux
+                  </a>
+              
+                
+                  <a href="/labixiaoliu.github.io/api/git.html" class="mdui-list-item mdui-ripple mdui-ripple-white" target="_self">
+                
+                    git
+                  </a>
+              
+                
+                  <a href="/labixiaoliu.github.io/api/docker.html" class="mdui-list-item mdui-ripple mdui-ripple-white" target="_self">
+                
+                    docker
+                  </a>
+              
+            </div>
+          </div>
+        
+      
+    </ul>
+  
+</div>
+
+    <div class="theme-spacer"></div>
+    <!-- footer -->
+    <div class="theme-drawer__warpper__footer">
+  <div class="mdui-typo mdui-typo-caption-opacity">
+    Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
+    <br />
+    Theme - <a href="//github.com/Halyul/hexo-theme-mdui" target="_blank">Halyul/MDUI</a>
+    <br />
+    <span>
+      Copyright ©
+      <span year></span>
+      Damon Chen
+    </span>
+    
+    
+      <br />
+      <span>
+        Last Updated: Jun 09, 2020
+      </span>
+    
+    
+  </div>
+</div>
+<script type="text/javascript">
+  var copyrightNow = new Date().getFullYear();
+  var textContent = document.querySelector('span[year]')
+  
+    textContent.textContent = copyrightNow
+  
+</script>
+
+  </div>
+</div>
+
+    <div id="top"></div>
+
+    
+<script src="/labixiaoliu.github.io/js/lightgallery.min.js"></script>
+
+
+    <div id="barba-wrapper">
+      <div class="barba-container"  data-namespace="post">
+        
+  
+
+
+
+  
+<link rel="stylesheet" href="/labixiaoliu.github.io/css/prism/darcula.min.css">
+
+
+
+  
+<link rel="stylesheet" href="/labixiaoliu.github.io/css/prism/line-number.min.css">
+
+
+
+<div class="theme-post">
+  <div class="theme-post__background mdui-color-theme"></div>
+  <div class="theme-post__header mdui-color-theme">
+    <div class="theme-post__header__title mdui-text-truncate">
+      
+    </div>
+    <div class="theme-spacer"></div>
+    <div class="theme-post__header__actions mdui-valign">
+      <div>
+        <span>Posted: </span>
+        <span style="float: right">Jun 09, 2020</span>
+        
+      </div>
+      
+
+      
+  <div class="theme-post__share">
+    <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-menu="{target: '#post-share-menu'}">
+      <i class="mdui-icon material-icons">&#xe80d;</i>
+    </button>
+
+    <ul class="mdui-menu" id="post-share-menu">
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://labixiaolliu.github.io/labixiaoliu.github.io//labixiaoliu.github.io/fullstack/linux.html" target="_blank" class="mdui-ripple">
+                Share to Facebook
+            </a>
+        </li>
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://plus.google.com/share?url=https://labixiaolliu.github.io/labixiaoliu.github.io//labixiaoliu.github.io/fullstack/linux.html" target="_blank" class="mdui-ripple">
+                Share to Google+
+            </a>
+        </li>
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://labixiaolliu.github.io/labixiaoliu.github.io//labixiaoliu.github.io/fullstack/linux.html&title=" target="_blank" class="mdui-ripple">
+                Share to Linkedin
+            </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://twitter.com/intent/tweet?text=&url=https://labixiaolliu.github.io/labixiaoliu.github.io//labixiaoliu.github.io/fullstack/linux.html&via=Damon Chen" target="_blank" class="mdui-ripple">
+                Share to Twitter
+            </a>
+        </li>
+      
+
+      
+
+    </ul>
+  </div>
+
+
+    </div>
+  </div>
+  <div class="theme-post__warpper
+    
+  ">
+    <div class="theme-post__warpper__container">
+      <article class="mdui-card theme-post__card mdui-hoverable">
+        <section class="theme-post__card__warning">
+          This article was last modified
+          <span id="content-warning"></span>
+          days ago.
+          The content of this post may be outdated!
+        </section>
+        
+        
+        <section class="mdui-typo theme-post__card__content">
+          <h2 id="linux初探"><a href="#linux初探" class="headerlink" title="linux初探"></a>linux初探</h2><h3 id="远程服务器连接"><a href="#远程服务器连接" class="headerlink" title="远程服务器连接"></a>远程服务器连接</h3><pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">ssh</span> -p 27822 damom@192.168.0.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="常用命令学习-ubuntu"><a href="#常用命令学习-ubuntu" class="headerlink" title="常用命令学习-ubuntu"></a>常用命令学习-ubuntu</h3><ul>
+<li><p>查看系统信息</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">lsb_release -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>查看linux内核版本</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">uname</span> -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<ul>
+<li><p>磁盘空间查询</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">df</span>        以k为单位
+<span class="token function">df</span> -Th    以G为单位<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ul>
+<li><p>查看权限</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">ls</span> -la<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 查询结果<code>drwxrwxrwx</code></p>
+<div class="mdui-table-fluid theme-post__card__table--flat"><table class="mdui-table mdui-table-hoverable ">
+<thead>
+<tr>
+<th>d</th>
+<th>文件夹</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>l</td>
+<td>文件</td>
+</tr>
+<tr>
+<td>r</td>
+<td>read 读</td>
+</tr>
+<tr>
+<td>w</td>
+<td>write 写</td>
+</tr>
+<tr>
+<td>x</td>
+<td>执行</td>
+</tr>
+</tbody></table></div>
+<p>三个一组</p>
+<ul>
+<li>root权限 </li>
+<li>组权限 </li>
+<li>其他用户权限</li>
+</ul>
+</li>
+<li><p>根目录介绍</p>
+<div class="mdui-table-fluid theme-post__card__table--flat"><table class="mdui-table mdui-table-hoverable ">
+<thead>
+<tr>
+<th>home</th>
+<th>个人目录</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>etc</td>
+<td>软件配置文件</td>
+</tr>
+<tr>
+<td>sys</td>
+<td>系统目录</td>
+</tr>
+<tr>
+<td>usr</td>
+<td>系统可执行文件</td>
+</tr>
+<tr>
+<td>var</td>
+<td>日志文件</td>
+</tr>
+<tr>
+<td>www</td>
+<td>网站目录</td>
+</tr>
+</tbody></table></div>
+</li>
+</ul>
+<ul>
+<li><p>top命令，查看进程情况</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">top</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>常用的文件执行命令</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">touch</span> a.txt    --创建文件
+<span class="token function">mkdir</span>          --创建文件夹
+<span class="token function">vi</span> a.txt       --编辑文件
+<span class="token function">cat</span> a.txt      --查看文件夹
+<span class="token keyword">echo</span> <span class="token string">'1233123'</span> <span class="token operator">>></span> a.txt --把内容添加到文件末尾
+<span class="token keyword">echo</span> <span class="token string">'123'</span> <span class="token operator">></span> a.txt  --将123内容覆盖a.txt的内容
+<span class="token function">rm</span> a.txt        --删除文件
+<span class="token function">rm</span> -r textdir/  --删除文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ul>
+<li><p>下载解压缩文件</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">wget</span> http://xxxx.tar.gz   下载压缩包到当前目录
+<span class="token function">tar</span> zxvf xxx.tar.gz  解压缩文件 z-.gz文件  x解压缩  v显示解压过程 f解压缩文件名使用归档的名字
+<span class="token function">tar</span> zcvf xxx.tar.gz xxx  c-压缩 将xxx文件压缩成xxx.tar.gz名字的压缩文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ul>
+<li><p>进程查看</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">ps</span> -ef <span class="token operator">|</span><span class="token function">grep</span> docker 
+<span class="token function">kill</span> -9 27643  强制终止27643进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ul>
+<li><p>查看进程状态</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">service</span> sshd status    查看sshd运行状态
+<span class="token function">service</span> sshd stop      关闭
+<span class="token function">service</span> sshd restart   重启<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="密钥连接服务器"><a href="#密钥连接服务器" class="headerlink" title="密钥连接服务器"></a>密钥连接服务器</h3><ul>
+<li><p>修改ssh端口</p>
+<pre><code>netstat -anlp |grep sshd   查看service运行端口
+vi /etc/ssh/sshd_config    修改sshd配置文件 修改port  
+service sshd restart</code></pre><p><em>centos需要执行semanage命令，如果找不到这个命令，可以使用<code>yum whatprovides semanage</code>反查</em></p>
+<p><em>安装<code>yum instll -y policycoreutils-python</code></em>,</p>
+<p><em>再执行semanage  命令</em></p>
+<p><em><code>semanage port -l |grep ssh</code>查看当前ssh的端口开放情况</em></p>
+<p><em><code>semanage port -d -t ssh_port_t -p tcp 10002</code> 可以删除不想用来连接的端口号</em></p>
+</li>
+<li><p>密钥方式远程连接服务器</p>
+<pre><code>cd ~/.ssh
+ssh-keygen    连续回车生成密钥，如果本机存在密钥，则不需要另外生成</code></pre><p>～/.ssh文件夹下目录</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-03%E4%B8%8B%E5%8D%884.32.47.png" alt=""></p>
+<p>执行<code>vi config</code></p>
+<p>远程服务器查看是否有~/.ssh目录，没有的话新建一个</p>
+<pre><code>mkdir -p ~/.ssh         创建.ssh文件夹
+vi authorized_key                创建并且修改authorized_key文件</code></pre><p>复制本机的id_rsa.pub文件中的内容，黏贴到远程服务器的authorized_key中，authorized_key可以有多个复制内容</p>
+<p>本机config修改</p>
+<pre class="line-numbers language-yaml" mdui-tooltip="{content: 'yaml'}"><code class="language-yaml">Host labixiaoliu123
+  Port 22
+  HostName 118.25.133.142
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>保存后<code>ssh labixiaoliu123</code> 直接可以连接到服务器</p>
+</li>
+</ul>
+
+        </section>
+
+        
+          <section class="theme-post__card__license mdui-typo">
+            <span>
+              Article License: 
+              
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
+              
+            </span>
+            <br />
+            <span>Article Permalink: <a href="https://labixiaolliu.github.io/fullstack/linux.html">https://labixiaolliu.github.io/fullstack/linux.html</a></span>
+            
+              <br />
+              <span>Article Markdown: <a href="https://labixiaolliu.github.io/fullstack/linux.htmlundefined.md">https://labixiaolliu.github.io/fullstack/linux.htmlundefined.md</a></span>
+            
+          </section>
+        
+
+        
+          <section class="mdui-card-actions theme-post__card__actions">
+            
+              <button class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple  mdui-color-red" mdui-tooltip="{content: 'Buy me a beer?', position: 'right'}" mdui-dialog="{target: '#donateDialog'}">
+                <i class="mdui-icon fa fa-beer"></i>
+              </button>
+            
+            <div class="theme-spacer"></div>
+            
+            
+          </section>
+        
+
+        
+          
+            <script type="text/javascript">
+              themeRuntime.commentRest.function = function (newIdentifier, newUrl, newTitle) {
+                return
+              }
+            </script>
+          
+        
+      </article>
+      
+        <div class="mdui-color-theme theme-post__toc">
+          <html><head></head><body><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#linux&#x521D;&#x63A2;" data-href="#linux&#x521D;&#x63A2;"><span class="toc-number"></span> <span class="toc-text">1. linux&#x521D;&#x63A2;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;" data-href="#&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;"><span class="toc-number"></span> <span class="toc-text">1.1. &#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x5B66;&#x4E60;-ubuntu" data-href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x5B66;&#x4E60;-ubuntu"><span class="toc-number"></span> <span class="toc-text">1.2. &#x5E38;&#x7528;&#x547D;&#x4EE4;&#x5B66;&#x4E60;-ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5BC6;&#x94A5;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;" data-href="#&#x5BC6;&#x94A5;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;"><span class="toc-number"></span> <span class="toc-text">1.3. &#x5BC6;&#x94A5;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;</span></a></li></ol></li></ol></body></html>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="theme-spacer"></div>
+
+  
+    <div class="mdui-color-theme theme-post__toc-fab">
+  <button class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" mdui-menu="{target: '#toc-fab-menu', fixed: true}" id="toc-fab">
+    <i class="mdui-icon material-icons">&#xe242;</i>
+  </button>
+  <ul class="mdui-menu mdui-typo theme-post__toc-fab__menu" id="toc-fab-menu" style="padding: 8px;max-height: 80%">
+    <html><head></head><body><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#linux&#x521D;&#x63A2;" data-href="#linux&#x521D;&#x63A2;"><span class="toc-number"></span> <span class="toc-text">1. linux&#x521D;&#x63A2;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;" data-href="#&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;"><span class="toc-number"></span> <span class="toc-text">1.1. &#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x5B66;&#x4E60;-ubuntu" data-href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x5B66;&#x4E60;-ubuntu"><span class="toc-number"></span> <span class="toc-text">1.2. &#x5E38;&#x7528;&#x547D;&#x4EE4;&#x5B66;&#x4E60;-ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5BC6;&#x94A5;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;" data-href="#&#x5BC6;&#x94A5;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;"><span class="toc-number"></span> <span class="toc-text">1.3. &#x5BC6;&#x94A5;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;</span></a></li></ol></li></ol></body></html>
+  </ul>
+</div>
+
+  
+
+  
+
+  
+    <div class="mdui-dialog" id="donateDialog">
+      <div class="mdui-dialog-title">Buy me a beer?</div>
+      <div class="mdui-dialog-content">
+        <div class="mdui-list">
+          
+            <a href="/img/avatar.png" title="wechat" class="mdui-list-item mdui-ripple" target="_blank">
+              
+                <i class="mdui-list-item-icon mdui-icon fa fa-wechat mdui-text-center"></i>&emsp;
+              
+              
+              
+              wechat
+            </a>
+          
+            <a href="https://paypal.com" title="paypay" class="mdui-list-item mdui-ripple" target="_blank">
+              
+                <i class="mdui-list-item-icon mdui-icon fa fa-paypal mdui-text-center"></i>&emsp;
+              
+              
+              
+              paypay
+            </a>
+          
+        </div>
+      </div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple mdui-ripple" mdui-dialog-close>Cancel</button>
+      </div>
+    </div>
+  
+</div>
+<script type="text/javascript">
+  themeRuntime.scriptsMap.post = [];
+  if (document.querySelector('.theme-post__toc-fab__menu > ol') !== null && document.querySelector('.theme-post__toc > ol') !== null) {
+    tocHighlight()
+    function tocHighlight() {
+      var timer;
+      function doWork() {
+        listens.forEach(function(value, index) {
+          value[1]();
+          value[0].classList.remove("mdui-list-item-active");
+        })
+        let actionToc = (listens[listens.reduce(function(r, v, index) {
+          if (v[2] == true) {
+            return index;
+          } else return r;
+        }, undefined)] || [])[0] || listens[0][0];
+        actionToc.classList.add("mdui-list-item-active");
+        if(actionToc.getClientRects().length == 0)return;
+        showToc(actionToc);
+      }
+      function showToc(toc) {
+        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
+        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
+        let offset = 0;
+        if (offsetTop < 0) offset = offsetTop;
+        if (offsetBottom > 0) offset = offsetBottom;
+        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var now = cardToc.scrollTop;
+          var speed = (targetTop - now) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+          if (Math.abs(now - targetTop) < 1) {
+            clearInterval(timer);
+          }
+          cardToc.scrollTop = now + speed;
+        }, 30);
+      }
+      var listens = [];
+      var cardToc = document.querySelector('.theme-post__toc');
+      var links = cardToc.querySelectorAll(".theme-post__toc__content__link");
+      var toclist = document.querySelector(".theme-post__toc > ol");
+      Array.prototype.forEach.call(links, function(value, index) {
+        var id = (value.getAttribute("href") || "#").slice(1);
+        var element = document.getElementById(id);
+        listens.push([value, function() {
+          var readed = false;
+          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
+            readed = true;
+          } else {
+            readed = false;
+          }
+          listens[index][2] = readed;
+        }, false])
+      })
+      doWork();
+      window.addEventListener("scroll", doWork)
+      var listener = {
+        function:  doWork,
+        event: 'scroll',
+        el: window,
+        removed: false
+      }
+      themeRuntime.scriptsMap.post.push(listener)
+    }
+  }
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var postLastModifiedDate = 1591686115676
+    var today = (new Date()).getTime()
+    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
+    if (difference >= 100) {
+      document.querySelector('.theme-post__card__warning').style.display = 'block'
+      document.querySelector('#content-warning').textContent = difference
+    }
+  })();
+</script>
+
+<script type="text/javascript">
+  var images = document.querySelectorAll('.theme-post__card__content img')
+  for (i = 0; i < images.length; i++) {
+    //console.log('image added', i)
+    images[i].addEventListener("click", openLG);
+    var listener = {
+      function:  openLG,
+      event: 'click',
+      el: images[i],
+      removed: false
+    }
+    themeRuntime.scriptsMap.post.push(listener)
+  }
+  function openLG() {
+    var img_src = this.getAttribute('src');
+    var img_alt = this.getAttribute('alt');
+    lightGallery(this, {
+      dynamic: true,
+      counter: false,
+      dynamicEl: [{
+        "src": img_src,
+        'subHtml': "<span author>Damon Chen</span><div descr>" + img_alt + "</div>"
+      }],
+    });
+  }
+</script>
+
+
+
+
+
+
+      </div>
+    </div>
+  </main>
+
+  <div id="outdated" style="z-index: 9999;">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+  </div>
+  <!-- import js -->
+
+
+  
+<script src="/labixiaoliu.github.io/js/outdatedbrowser.min.js"></script>
+
+
+
+
+  
+    
+<script src="/labixiaoliu.github.io/js/js.pure.min.js"></script>
+
+  
+
+
+<!-- theme js -->
+<script type="text/javascript">
+  (function() {
+    var appbarTopFlag = false;
+    var appbarEl = document.querySelector('.theme-appbar');
+    function appbarShadow() {
+      var bodyScrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      if (bodyScrolled > 0 && !appbarTopFlag) {
+        appbarEl.classList.add('theme-appbar--shadow');
+        appbarTopFlag = true;
+      } else if (bodyScrolled === 0 && appbarTopFlag) {
+        appbarEl.classList.remove('theme-appbar--shadow');
+        appbarTopFlag = false;
+      }
+    }
+    appbarShadow()
+    window.addEventListener('scroll', appbarShadow);
+  })();
+  (function() {
+    function detechTheme() {
+      var modeFlag = localStorage.getItem('darkMode');
+      // true for dark mode, false for bright mode
+      if(modeFlag === "true"){
+        document.querySelector('body').classList.add('mdui-theme-layout-dark')
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#212121")
+        return true
+      } else if(!window.matchMedia) {
+          return false;
+      } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.querySelector('body').classList.add('mdui-theme-layout-dark')
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#212121")
+          return true;
+      } else if(window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.querySelector('body').classList.remove('mdui-theme-layout-dark')
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#fff")
+          return false;
+      } else {
+        return false;
+      }
+    }
+    var modeFlag = detechTheme();
+    var modeEl = document.querySelector('.theme-appbar__mode-switch');
+    function modeSwitch() {
+      if (!modeFlag) {
+        // default bright mode, switch to dark mode
+        document.querySelector('body').classList.add('mdui-theme-layout-dark');
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#212121")
+        localStorage.setItem('darkMode', true);
+        modeFlag = true;
+      } else {
+        // dark mode, switch to bright mode
+        document.querySelector('body').classList.remove('mdui-theme-layout-dark');
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#fff")
+        localStorage.setItem('darkMode', false);
+        modeFlag = false;
+      }
+    }
+    modeEl.addEventListener('click', modeSwitch);
+  })();
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+  document.querySelector('body').classList.add('theme-loaded')
+</script>
+
+
+
+
+</body>
+</html>

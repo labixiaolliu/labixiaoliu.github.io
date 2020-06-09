@@ -1,0 +1,1114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <script>
+    window.themeRuntime = {
+      root: "/labixiaoliu.github.io/",
+      scriptsMap: {},
+      init: {
+        status: false
+      },
+      commentRest: {
+        status: false
+      },
+      versions: {
+        theme: "2.1.0",
+        mdui: "0.4.0",
+        fetch: "3.0.0",
+        es6promise: "4.2.5+7f2b526d",
+        lightgallery: "1.0.1",
+        smoothscroll: "15.2.0"
+      }
+      
+    };
+    console.info("%cCopyright © 2018 - " + new Date().getFullYear() +" Halyul\n"+'Theme Version: ' + themeRuntime.versions.theme +'%c\nhttps://github.com/Halyul/hexo-theme-mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+  </script>
+  <!--
+        © HEXO MDUI Theme
+        https://github.com/Halyul/hexo-theme-mdui
+        -->
+
+  <meta charset="UTF-8">
+  <title> - 蜡笔小六博客屋</title>
+
+  <!-- Favicons -->
+  <link rel="icon shortcut" type="image/ico" href="/labixiaoliu.github.io/images/favicon.png">
+  <link rel="icon" sizes="192x192" href="/labixiaoliu.github.io/images/favicon.png">
+  <link rel="apple-touch-icon" href="/labixiaoliu.github.io/images/favicon.png">
+
+  <!-- Meta & Info -->
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="theme-color" content="#fff">
+
+  <meta name="author" content="Damon Chen">
+  
+  <meta name="keywords" content="blog, hexo, mdui">
+
+  <!--iOS -->
+  <meta name="apple-mobile-web-app-title" content="蜡笔小六博客屋">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://labixiaolliu.github.io">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content=" - 蜡笔小六博客屋 | 蜡笔小六博客屋">
+  <meta property="og:image" content="/images/favicon.png" />
+  
+
+  
+
+  
+
+  <!-- Import CSS -->
+  
+    
+<link rel="stylesheet" href="/labixiaoliu.github.io/css/mdui.css">
+
+  
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body class="mdui-drawer-body-left mdui-theme-primary-indigo mdui-theme-accent-pink">
+
+  <style>
+    #spinner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          opacity: 1;
+      -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+          transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+    }
+    main {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+      transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+      display: none;
+    }
+  </style>
+  <div id="spinner">
+    <style>
+      .spinner {
+
+      -webkit-animation: rotator 1.4s linear infinite;
+              animation: rotator 1.4s linear infinite;
+      }
+
+      @-webkit-keyframes rotator {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+      }
+      }
+
+      @keyframes rotator {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+      }
+      }
+
+      .path {
+      stroke-dasharray: 187;
+      stroke-dashoffset: 0;
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+              animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+      }
+
+      @-webkit-keyframes colors {
+      0% {
+        stroke: #4285F4;
+      }
+      25% {
+        stroke: #DE3E35;
+      }
+      50% {
+        stroke: #F7C223;
+      }
+      75% {
+        stroke: #1B9A59;
+      }
+      100% {
+        stroke: #4285F4;
+      }
+      }
+
+      @keyframes colors {
+      0% {
+        stroke: #4285F4;
+      }
+      25% {
+        stroke: #DE3E35;
+      }
+      50% {
+        stroke: #F7C223;
+      }
+      75% {
+        stroke: #1B9A59;
+      }
+      100% {
+        stroke: #4285F4;
+      }
+      }
+
+      @-webkit-keyframes dash {
+      0% {
+        stroke-dashoffset: 187;
+      }
+      50% {
+        stroke-dashoffset: 46.75;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+      }
+      100% {
+        stroke-dashoffset: 187;
+        -webkit-transform: rotate(450deg);
+                transform: rotate(450deg);
+      }
+      }
+
+      @keyframes dash {
+      0% {
+        stroke-dashoffset: 187;
+      }
+      50% {
+        stroke-dashoffset: 46.75;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+      }
+      100% {
+        stroke-dashoffset: 187;
+        -webkit-transform: rotate(450deg);
+                transform: rotate(450deg);
+      }
+      }
+    </style>
+    <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+  </div>
+
+  <main>
+    <div class="mdui-appbar mdui-appbar-fixed mdui-color-white mdui-shadow-0 theme-appbar">
+  <div class="mdui-toolbar theme-toolbar-top">
+    
+      <a href="/labixiaoliu.github.io/" class="mdui-btn mdui-btn-icon mdui-ripple theme-appbar__burger theme-appbar__burger--arrow">
+        <i class="mdui-icon">
+          <span></span>
+        </i>
+      </a>
+    
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple theme-appbar__mode-switch">
+      <i class="mdui-icon material-icons  theme-appbar__bright-mode">&#xe1ac;</i>
+      <i class="mdui-icon material-icons  theme-appbar__dark-mode" style="display: none;">&#xe3a7;</i>
+    </a>
+  </div>
+  <div class="mdui-toolbar theme-toolbar-bottom">
+    <span class="theme-toolbar-bottom__title">蜡笔小六博客屋</span>
+    
+      <a href="/labixiaoliu.github.io/search.html" class="mdui-textfield-icon mdui-btn mdui-btn-icon theme-toolbar-bottom__search">
+        <i class="mdui-icon material-icons">&#xe8b6;</i>
+      </a>
+    
+  </div>
+  <div class="mdui-progress theme-appbar__progress" id="progressBar">
+    <div class="mdui-progress-indeterminate"></div>
+  </div>
+</div>
+
+    <div class="mdui-drawer mdui-drawer-full-height theme-drawer" id="drawer">
+  <!-- header -->
+  <div class="theme-drawer__header">
+  <div class="theme-drawer__header__layer-1">
+    <div class="mdui-toolbar theme-toolbar-top">
+      
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple theme-appbar__burger theme-appbar__burger--drawer theme-appbar__burger--arrow" id="drawer-back">
+          <i class="mdui-icon">
+            <span></span>
+          </i>
+        </a>
+      
+    </div>
+    <div class="mdui-toolbar theme-toolbar-bottom">
+      <span class="theme-toolbar-bottom__title">蜡笔小六博客屋</span>
+    </div>
+  </div>
+  <div class="theme-drawer__header__layer-2" style="background-image: url(/labixiaoliu.github.io/images/bg.png)">
+    <img class="mdui-img-circle theme-drawer__header__layer-2__user__avatar" src="/labixiaoliu.github.io/images/avatar.jpg"/>
+    <div class="theme-drawer__header__layer-2__user__info">
+      <div class="theme-drawer__header__layer-2__user__info__author mdui-text-color-white-text">
+        Damon Chen
+      </div>
+      <div class="theme-drawer__header__layer-2__user__info__slogan mdui-text-color-white-secondary">
+        Day Day Up!
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="theme-drawer__warpper">
+    <!-- content -->
+    <div class="theme-drawer__warpper__content">
+  <ul class="mdui-list">
+    <a href="/labixiaoliu.github.io/" class="mdui-list-item mdui-ripple mdui-ripple-white">
+      <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+      <div class="mdui-list-item-content">Index</div>
+    </a>
+    <a href="/labixiaoliu.github.io/archives/" class="mdui-list-item mdui-ripple mdui-ripple-white">
+      <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+      <div class="mdui-list-item-content">Archives</div>
+    </a>
+    <ul class="mdui-list mdui-collapse" mdui-collapse="{accordion: true}" mdui-collapse>
+      
+      
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple mdui-ripple-white">
+          <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+          <div class="mdui-list-item-content">Years</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+          
+            <a href="/labixiaoliu.github.io/archives/2020/" class="mdui-list-item mdui-ripple">
+              2020
+            </a>
+          
+        </div>
+      </div>
+    </ul>
+  </ul>
+  
+    <div class="mdui-divider"></div>
+    <ul class="mdui-list" mdui-collapse="{accordion: true}" mdui-collapse>
+      
+        
+          
+            <a href="/labixiaoliu.github.io/api/study.html" target="_self" class="mdui-list-item mdui-ripple mdui-ripple-white">
+          
+              
+              
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe0ba;</i>
+              
+              
+              <div class="mdui-list-item-content">汇总</div>
+            </a>
+        
+      
+        
+          <div class="mdui-collapse-item">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple mdui-ripple-white">
+              
+              
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+              
+              
+              <div class="mdui-list-item-content">全栈学习</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                
+                  <a href="/labixiaoliu.github.io/api/linux.html" class="mdui-list-item mdui-ripple mdui-ripple-white" target="_self">
+                
+                    linux
+                  </a>
+              
+                
+                  <a href="/labixiaoliu.github.io/api/git.html" class="mdui-list-item mdui-ripple mdui-ripple-white" target="_self">
+                
+                    git
+                  </a>
+              
+                
+                  <a href="/labixiaoliu.github.io/api/docker.html" class="mdui-list-item mdui-ripple mdui-ripple-white" target="_self">
+                
+                    docker
+                  </a>
+              
+            </div>
+          </div>
+        
+      
+    </ul>
+  
+</div>
+
+    <div class="theme-spacer"></div>
+    <!-- footer -->
+    <div class="theme-drawer__warpper__footer">
+  <div class="mdui-typo mdui-typo-caption-opacity">
+    Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
+    <br />
+    Theme - <a href="//github.com/Halyul/hexo-theme-mdui" target="_blank">Halyul/MDUI</a>
+    <br />
+    <span>
+      Copyright ©
+      <span year></span>
+      Damon Chen
+    </span>
+    
+    
+      <br />
+      <span>
+        Last Updated: Jun 09, 2020
+      </span>
+    
+    
+  </div>
+</div>
+<script type="text/javascript">
+  var copyrightNow = new Date().getFullYear();
+  var textContent = document.querySelector('span[year]')
+  
+    textContent.textContent = copyrightNow
+  
+</script>
+
+  </div>
+</div>
+
+    <div id="top"></div>
+
+    
+<script src="/labixiaoliu.github.io/js/lightgallery.min.js"></script>
+
+
+    <div id="barba-wrapper">
+      <div class="barba-container"  data-namespace="post">
+        
+  
+
+
+
+  
+<link rel="stylesheet" href="/labixiaoliu.github.io/css/prism/darcula.min.css">
+
+
+
+  
+<link rel="stylesheet" href="/labixiaoliu.github.io/css/prism/line-number.min.css">
+
+
+
+<div class="theme-post">
+  <div class="theme-post__background mdui-color-theme"></div>
+  <div class="theme-post__header mdui-color-theme">
+    <div class="theme-post__header__title mdui-text-truncate">
+      
+    </div>
+    <div class="theme-spacer"></div>
+    <div class="theme-post__header__actions mdui-valign">
+      <div>
+        <span>Posted: </span>
+        <span style="float: right">Jun 09, 2020</span>
+        
+      </div>
+      
+
+      
+  <div class="theme-post__share">
+    <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-menu="{target: '#post-share-menu'}">
+      <i class="mdui-icon material-icons">&#xe80d;</i>
+    </button>
+
+    <ul class="mdui-menu" id="post-share-menu">
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://labixiaolliu.github.io/labixiaoliu.github.io//labixiaoliu.github.io/fullstack/git.html" target="_blank" class="mdui-ripple">
+                Share to Facebook
+            </a>
+        </li>
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://plus.google.com/share?url=https://labixiaolliu.github.io/labixiaoliu.github.io//labixiaoliu.github.io/fullstack/git.html" target="_blank" class="mdui-ripple">
+                Share to Google+
+            </a>
+        </li>
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://labixiaolliu.github.io/labixiaoliu.github.io//labixiaoliu.github.io/fullstack/git.html&title=" target="_blank" class="mdui-ripple">
+                Share to Linkedin
+            </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://twitter.com/intent/tweet?text=&url=https://labixiaolliu.github.io/labixiaoliu.github.io//labixiaoliu.github.io/fullstack/git.html&via=Damon Chen" target="_blank" class="mdui-ripple">
+                Share to Twitter
+            </a>
+        </li>
+      
+
+      
+
+    </ul>
+  </div>
+
+
+    </div>
+  </div>
+  <div class="theme-post__warpper
+    
+  ">
+    <div class="theme-post__warpper__container">
+      <article class="mdui-card theme-post__card mdui-hoverable">
+        <section class="theme-post__card__warning">
+          This article was last modified
+          <span id="content-warning"></span>
+          days ago.
+          The content of this post may be outdated!
+        </section>
+        
+        
+        <section class="mdui-typo theme-post__card__content">
+          <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="公钥生成"><a href="#公钥生成" class="headerlink" title="公钥生成"></a><strong>公钥生成</strong></h3><ul>
+<li>执行命令</li>
+</ul>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">ssh-keygen -t rsa -b 4096 -C <span class="token string">"779817709@qq.com"</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>连续三次回车，生成目录在<code>~/.ssh</code>，id_rsa为私钥，id_rsa.pub为公钥</li>
+</ul>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-04%E4%B8%8B%E5%8D%8812.58.38.png" alt=""></p>
+<ul>
+<li><p>复制id_rsa.pub的内容到github中</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-04%E4%B8%8B%E5%8D%881.04.07.png" alt=""></p>
+</li>
+<li><p>完成后，即可以使用git clone进行下拉代码</p>
+</li>
+</ul>
+<h3 id="多公钥管理"><a href="#多公钥管理" class="headerlink" title="多公钥管理"></a><strong>多公钥管理</strong></h3><p>存在码云或者github多个仓库，需要多公钥管理</p>
+<ul>
+<li><p>生成公钥</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">ssh-keygen -t rsa -b 4096 -C <span class="token string">"779817709@qq.com"</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>第一次回车后，定义保存公钥的地址,这里我保存到<code>/Users/Damon/git-key</code>,保存后在这个目录生成2个文件<code>github_key</code>和<code>github_key.pub</code>文件，分别保存私钥和公钥，然后仔回车2次完成生成过程</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-04%E4%B8%8B%E5%8D%881.07.59.png" alt=""></p>
+</li>
+<li><p>复制<code>github_key.pub</code>中的内容到github的公钥管理中</p>
+</li>
+<li><p>修改本地<code>~/.ssh/config</code>文件，执行<code>vim config</code></p>
+<pre class="line-numbers language-yaml" mdui-tooltip="{content: 'yaml'}"><code class="language-yaml">Host github.com                            <span class="token comment" spellcheck="true">#别名</span>
+  HostName github.com                      <span class="token comment" spellcheck="true">#主机名</span>
+  User labixiaoliu                         <span class="token comment" spellcheck="true">#github的user名</span>
+  PreferredAuthentications publickey       <span class="token comment" spellcheck="true">#采用公钥鉴权方式</span>
+  IdentityFile /Users/Damon/git<span class="token punctuation">-</span>key/github_key <span class="token comment" spellcheck="true">#公钥位置，我们本地保存地址的绝对路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>备注</strong>：<em>这里值得一提的是，如果别名这里修改了，假设为<u>github</u>,假设我们仓库的ssh的地址是<a href="mailto:git@github.com">git@github.com</a>:labixiaolliu/testing.git，我们本地执行的是<code>git clone git@github:labixiaolliu/testing.git</code>，需要注意这2者的区别</em></p>
+</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-04%E4%B8%8B%E5%8D%881.52.40.png" alt=""></p>
+<h4 id="git-remote-关联仓库"><a href="#git-remote-关联仓库" class="headerlink" title="git remote 关联仓库"></a>git remote 关联仓库</h4><ul>
+<li><p>单关联</p>
+<ul>
+<li><p>github*创建仓库，使用<code>git clone</code>命令拉取</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> clone git@github.com:labixiaolliu/testGit.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>本地创建文件夹，关联远程仓库</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">mkdir</span> <span class="token function">test</span>
+<span class="token function">cd</span> <span class="token function">test</span>
+<span class="token function">git</span> init     
+<span class="token function">git</span> remote add origin git@github.com:labixiaolliu/testGit.git  <span class="token comment" spellcheck="true">#关联远程，origin是一个别名</span>
+<span class="token function">git</span> push -u origin master            <span class="token comment" spellcheck="true">#-u表示将master设置为默认分支，以后可以用git push直接推送master</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>多关联</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> remote add origin git@github.com:labixiaolliu/testGit.git    <span class="token comment" spellcheck="true">#关联第一个 别名叫origin</span>
+<span class="token function">git</span> remote add origin1 git@github.com:labixiaolliu/testGit.git   <span class="token comment" spellcheck="true">#关联第二个 别名叫origin1，俩个仓库地址不同，这里仅作演示</span>
+<span class="token function">git</span> push origin master      <span class="token comment" spellcheck="true">#推送到第一个仓库</span>
+<span class="token function">git</span> push origin1 master     <span class="token comment" spellcheck="true">#推送到第二个仓库</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="git-stash-缓存文件"><a href="#git-stash-缓存文件" class="headerlink" title="git stash 缓存文件"></a>git stash 缓存文件</h4><p>​    <strong>运用场景</strong>：在修改代码的时候，临时需要出一个版本</p>
+<ul>
+<li><p>如图，有<code>a.txt``b.txt``c.txt</code>  三个文件在缓存区</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-04%E4%B8%8B%E5%8D%884.20.57.png" alt=""></p>
+</li>
+<li><p>临时需要在<code>b.txt</code>在原来的基础上修改提交出一个版本</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> stash       <span class="token comment" spellcheck="true">#将缓存区的文件全部缓存</span>
+<span class="token function">git</span> stash -p    <span class="token comment" spellcheck="true">#逐个确认是否将文件放入缓存区，y：是 n：否</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>修改<code>b.txt</code>，然后执行<code>git add ``git commit -m &quot;&quot;</code>进行提交</p>
+</li>
+<li><p>推出stash，如果有冲突，处理冲突</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> stash pop    <span class="token comment" spellcheck="true">#stash推出最近的一次，并且stash list记录清除</span>
+<span class="token function">git</span> stash apply  <span class="token comment" spellcheck="true">#stash推出最近的一次，并且stash list记录保留，后续需要drop掉</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<p><strong>其他常用命令</strong>：</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> stash list  <span class="token comment" spellcheck="true">#查看stash记录</span>
+<span class="token function">git</span> stash <span class="token function">clear</span> <span class="token comment" spellcheck="true">#清除所有stash记录</span>
+<span class="token function">git</span> stash drop stash@<span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token comment" spellcheck="true">#删除具体的stash记录，stash@{0}是具体的记录，不加参数，删除最近的一次记录</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><strong><em>备注</em></strong>：这里的一次记录和具体的文件数量没关系，执行<code>stash</code>和<code>stash -p</code>  都是一次缓存记录</p>
+<p>​            新增的文件是不能够被stash的，如果要stash新增文件，需要先add这个文件增加跟踪，然后再git stash</p>
+<h4 id="git-reset-git-log-git-reflog-回滚版本和日志列表"><a href="#git-reset-git-log-git-reflog-回滚版本和日志列表" class="headerlink" title="git reset/git log/git reflog 回滚版本和日志列表"></a>git reset/git log/git reflog 回滚版本和日志列表</h4><ul>
+<li><p><code>git log</code>/<code>git reflog</code>分别查看log信息</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> log 
+<span class="token function">git</span> log --graph --all  <span class="token comment" spellcheck="true">#--graph查看分支的分叉情况，--all所有分支</span>
+<span class="token function">git</span> log --all --oneline --graph <span class="token comment" spellcheck="true">#--oneline 以一行的形式展现</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-04%E4%B8%8B%E5%8D%884.48.03.png" alt=""></p>
+</li>
+</ul>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> reflog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>​    <img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-04%E4%B8%8B%E5%8D%884.49.39.png" alt=""></p>
+<ul>
+<li>回滚版本</li>
+</ul>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> reset --hard 44f2f28     <span class="token comment" spellcheck="true"># 回滚到44f2f28这个版本</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><p><code>git log</code>最近一条commit信息会丢失，<code>git reflog</code> 不会,反而会增加删除这条记录的对应记录</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-04%E4%B8%8B%E5%8D%884.54.12.png" alt=""></p>
+</li>
+</ul>
+<p><strong><em>备注</em></strong>：git reflog 可以查看所有分支的所有操作记录（包括已经被删除的 commit 记录和 reset 的操作）</p>
+<h4 id="git-config-配置"><a href="#git-config-配置" class="headerlink" title="git config 配置"></a>git config 配置</h4><ul>
+<li><p>查看全局配置</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> config --global --list  <span class="token comment" spellcheck="true">#查看所有的全局配置</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>配置用户名，邮箱(commit 之前必须设置)</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">""</span>
+<span class="token function">git</span> config --global user.email <span class="token string">""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="git-pull-push-fetch"><a href="#git-pull-push-fetch" class="headerlink" title="git pull/push/fetch"></a>git pull/push/fetch</h4><p>​    <strong>背景</strong>：A,B俩个地方，分别同一个仓库，并且在这个分支上进行<code>pull/push</code>等操作</p>
+<ul>
+<li><p>场景一：A在master分支提交了一个common.txt,B有2个分支，master和develop，俩个分支目前保持一致</p>
+<img src="/labixiaoliu.github.io/images/截屏2020-06-05上午10.34.40.png" style="zoom:50%;" />
+
+<p><strong>B在develop分支执行 <code>git pull origin master</code>,发现B的develop分支下拉并且merge了仓库的master分支，B的mstaer分支没有改变</strong></p>
+<img src="/labixiaoliu.github.io/images/截屏2020-06-05上午10.38.46.png" style="zoom:50%;" />
+</li>
+<li><p>git fetch</p>
+</li>
+</ul>
+<p><strong>第一种用法：</strong>git fetch`master分支，表示远程master有更新，拉取到FETCH_HEAD这个变量分支</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> fetch origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-05%E4%B8%8A%E5%8D%8810.45.35.png" alt=""></p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> merge FETCH_HEAD  <span class="token comment" spellcheck="true">#合并FETCH_HEAD到当前分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>第二种用法：</strong>直接下拉合并</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> fetch origin master:dev1   <span class="token comment" spellcheck="true">#将远程的master下拉下来并且合并到dev1分支上，如果没有dev1，就会新建一个dev分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h4><ul>
+<li><p>查看本地的版本提交信息<code>git reflog</code></p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-05%E4%B8%8A%E5%8D%8811.00.43.png" alt=""></p>
+</li>
+<li><p>回退到上一个版本</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> reset --hard head^       <span class="token comment" spellcheck="true">#回退到上一个版本</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>回退到具体版本</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> reset --hard ab63626   <span class="token comment" spellcheck="true">#回退到hash值为ab63626的版本</span>
+<span class="token function">git</span> reset --hard head~1    <span class="token comment" spellcheck="true">#切换到HEAD@{1}的版本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="冲突处理"><a href="#冲突处理" class="headerlink" title="冲突处理"></a>冲突处理</h4><p>​    本地有未提交的代码，pull的时候检测到和远程有冲突，会组织下拉需要先stash或者先本地commit，</p>
+<ul>
+<li><code>git stash</code>后，下拉代码完成后，执行<code>git stash apply</code>会默认进行一次merge，产生冲突并且解决</li>
+<li><code>git coomit</code>后，下拉代码完成后，自动执行merge操作，这个时候进行冲突解决</li>
+</ul>
+<h4 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h4><ul>
+<li><p><code>git branch</code></p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> branch dev   <span class="token comment" spellcheck="true">#以当前代码为基准，复制一份到新建的dev分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p><code>git checkout</code></p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> checkout dev <span class="token comment" spellcheck="true">#切换到dev</span>
+<span class="token function">git</span> checkout -b dev  <span class="token comment" spellcheck="true">#以当前代码为基准，复制一份到新建的dev分支，并且切换到dev分支</span>
+<span class="token function">git</span> checkout -- a.txt <span class="token comment" spellcheck="true">#取消a.txt 的修改,没有--也可以，但是只能取消修改的文件，不能是新增的</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>git tag</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> tag v1.0.0    <span class="token comment" spellcheck="true">#给当前分支当前节点打一个v1.0.0的tag，可以理解为给当时打一个快照</span>
+<span class="token function">git</span> tag --list    <span class="token comment" spellcheck="true">#查看本地tag列表,也可缩略为git tag -l</span>
+<span class="token function">git</span> push origin v1.0.0 <span class="token comment" spellcheck="true">#单独推送tag</span>
+<span class="token function">git</span> push origin --tags <span class="token comment" spellcheck="true">#推送所有的tag列表</span>
+<span class="token function">git</span> push origin master --tags   <span class="token comment" spellcheck="true">#推送分支的时候把这上面的tag列表也推送到远程</span>
+<span class="token function">git</span> tag -d -v1.0.0     <span class="token comment" spellcheck="true">#删除本地的tag版本</span>
+<span class="token function">git</span> push origin :refs/tags/v1.0.0 <span class="token comment" spellcheck="true">#删除远程仓库的tag</span>
+<span class="token function">git</span> push origin :feature     <span class="token comment" spellcheck="true">#删除远程仓库的feature分支</span>
+<span class="token function">git</span> branch -D feature         <span class="token comment" spellcheck="true">#删除本地仓库的feature分支 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>git reset</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> reset HEAD A.txt  <span class="token comment" spellcheck="true">#对已经git add的A文件，取消对A文件的跟踪</span>
+<span class="token function">git</span> reset --hard <span class="token function">head</span>  <span class="token comment" spellcheck="true">#回退本次修改前,特别注意，如果有新建文件，并且没有add，这个文件会保留更改，修改的文件都会回到回退本次修改前，如果新增的文件已经add，那么新增文件会取消，修改文件都会回滚到回退本次修改前</span>
+<span class="token function">git</span> rest --hard head^       <span class="token comment" spellcheck="true">#回退到上一个版本</span>
+<span class="token function">git</span> reset --hard ab63626   <span class="token comment" spellcheck="true">#回退到hash值为ab63626的版本 --推荐</span>
+<span class="token function">git</span> reset --hard head~1    <span class="token comment" spellcheck="true">#切换到HEAD@{1}的版本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>git cherry-pick</p>
+<p>dev分支有G，H，I，J四个commit，master要复制H，I俩个commit</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8B%E5%8D%881.19.57.png" alt=""></p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> cherry-pick cd66625<span class="token punctuation">..</span>25ab101   <span class="token comment" spellcheck="true">#复制多个commit</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8B%E5%8D%881.31.06.png" alt=""></p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> cherry-pick 83b709e <span class="token comment" spellcheck="true">#这里再次复制这个节点只能在上次复制的后面的commit，不能是之前的，例如cd66625这个commit</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash">  <span class="token function">git</span> cherry-pick <span class="token punctuation">(</span>--continue <span class="token operator">|</span> --skip <span class="token operator">|</span> --abort <span class="token operator">|</span> --quit<span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true"># --skip 跳过冲突</span>
+  <span class="token comment" spellcheck="true"># --abort 取消这次复制</span>
+  <span class="token comment" spellcheck="true"># --continue 继续</span>
+  <span class="token comment" spellcheck="true"># --quit</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h4><p><strong>rebase,重新定义起点的意思,rebase减少的是提交或者说节点</strong></p>
+<p><strong>注意：rebase只能合并本地分支</strong></p>
+<ul>
+<li><p>本地分支的合并</p>
+<ol>
+<li><p>本地做了2次提交，分别增加了N.txt和O.txt</p>
+</li>
+<li><p><code>git log</code>查看提交</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8A%E5%8D%889.35.15-1666547.png" alt=""></p>
+</li>
+<li><p><code>git rebase -i [startpoint]  [endpoint]</code>后面跟2个参数，终点默认是当前分支<code>HEAD</code>所指向的<code>commit</code></p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> rebase -i 981a0fa3c19dc312e3ad22ecc7461aa06300d124 <span class="token comment" spellcheck="true">#合并后2次提交</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>看到如下</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8A%E5%8D%889.38.24.png" alt=""></p>
+<p>这里的前面的单词意思</p>
+<blockquote>
+<p>pick：保留该commit（缩写:p）</p>
+<p>reword：保留该commit，但我需要修改该commit的注释（缩写:r）</p>
+<p>edit：保留该commit, 但我要停下来修改该提交(不仅仅修改注释)（缩写:e）</p>
+<p>squash：将该commit和前一个commit合并，会保留commit信息（缩写:s）</p>
+<p>fixup：将该commit和前一个commit合并，但我不要保留该提交的注释信息（缩写:f）</p>
+<p>exec：执行shell命令（缩写:x）</p>
+<p>drop：我要丢弃该commit（缩写:d）</p>
+</blockquote>
+</li>
+<li><p>我这希望把俩条commit和成一个，并且修改这个commit 信息</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8A%E5%8D%889.57.52.png" alt=""></p>
+</li>
+<li><p>保存之后重新让你写commit</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8A%E5%8D%889.58.18.png" alt=""></p>
+</li>
+<li><p><code>git log</code>查看log,俩条commit已经合并</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8A%E5%8D%8810.00.18.png" alt=""></p>
+</li>
+</ol>
+</li>
+<li><p>本地分支的节点复制</p>
+<img src="截屏2020-06-09上午11.24.51.png" style="zoom:50%;" />
+
+<ol>
+<li><p>master进行A的commit，然后切出dev分支，</p>
+</li>
+<li><p>master进行G一次commit</p>
+</li>
+<li><p>dev进行B，C，D，E，F五次commit</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8B%E5%8D%881.09.27.png" alt=""></p>
+</li>
+<li><p><code>rebase</code>dev的C，D，E三次commit到master上</p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> rebase f142d7f 572edcb --onto master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>HEAD指向游离状态</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8B%E5%8D%881.11.29.png" alt=""></p>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> checkout master
+<span class="token function">git</span> reset --hard a07bba5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>备注：</strong><code>git cherry-pick</code>也可以实现</p>
+</li>
+<li><p>master上有G，C，D，E四次commit</p>
+<p><img src="/labixiaoliu.github.io/images/%E6%88%AA%E5%B1%8F2020-06-09%E4%B8%8B%E5%8D%881.13.15.png" alt=""></p>
+</li>
+</ol>
+</li>
+</ul>
+<p>  <strong>备注：这一段有所引用，引用如下</strong></p>
+<blockquote>
+<p>作者：liqingbiubiu<br>链接：<a href="https://www.jianshu.com/p/4a8f4af4e803" target="_blank" rel="noopener">https://www.jianshu.com/p/4a8f4af4e803</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<p>远程分支下拉后一般有2种用法</p>
+<ul>
+<li><p>本地commit之后拉取远程分支（注意要在朴实之前），进行<code>git rebase</code></p>
+<ol>
+<li><p><code>git commit</code>本地代码</p>
+</li>
+<li><p><code>git pull origin master</code>拉取远程代码</p>
+</li>
+<li><p>解决冲突,进行 <code>add</code>和<code>commit</code>操作</p>
+</li>
+<li><p>执行<code>git rebase</code></p>
+</li>
+<li><p>如果有冲突，会切换HEAD处于游离状态，先处理冲突，然后<code>git add</code>和<code>git rebase --continue</code></p>
+</li>
+<li><p>解决，如果要push就可以push了</p>
+</li>
+</ol>
+</li>
+<li><p>pull 的时候执行rebase，然后解决冲突之后，–continue之后再进行push<strong>（推荐）</strong></p>
+<ol>
+<li><code>git pull origin master --rebase</code>拉取代码，并且进行rebase</li>
+<li>如果有冲突，切换当前HEAD处于游离状态</li>
+<li>解决冲突，执行<code>git add</code></li>
+<li>执行<code>git rebase --continue</code>成功后切换回主分支</li>
+<li>执行<code>commit</code>和<code>push</code></li>
+</ol>
+</li>
+</ul>
+<pre class="line-numbers language-bash" mdui-tooltip="{content: 'bash'}"><code class="language-bash"><span class="token function">git</span> rebase --abort   <span class="token comment" spellcheck="true">#放弃这次rebase，回退到coomit之后，pull之前的状态</span>
+<span class="token function">git</span> rebase --skip    <span class="token comment" spellcheck="true">#放弃和他冲突的一次commit</span>
+<span class="token function">git</span> rebase --continue <span class="token comment" spellcheck="true"># </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="git-flow"><a href="#git-flow" class="headerlink" title="git flow"></a>git flow</h3><p>经典模型过于复杂，不推荐</p>
+<ul>
+<li><p>第一种,适合持续集成项目，多次提交/合并/上线，还适合多发布场景</p>
+<ul>
+<li>Mater开发完成到一定阶段，发布一个版本到PreProduction，PreProduction做一次merge，发布一个预发布的版本</li>
+<li>PreProduction的版本稳定后，发布一个版本到Production，PreProduction和Production做一次merge，发布一个稳定版本</li>
+<li>所有的开发工作都在Master上，PreProduction和Production只需要做一次Megre发布工作，不涉及到自身的代码开发迭代</li>
+</ul>
+<img src="/labixiaoliu.github.io/images/截屏2020-06-05下午2.49.36.png" style="zoom:50%;" />
+</li>
+<li><p>第二种，适合版本项目</p>
+<ul>
+<li>稳定版本从master检出，bug修复在分支</li>
+<li>在master分支打下一个分支版本前，master分支可以和之前打出的tag的版本做合并，产生新的小版本</li>
+</ul>
+<img src="/labixiaoliu.github.io/images/截屏2020-06-05下午2.59.29.png" style="zoom:50%;" /></li>
+</ul>
+
+        </section>
+
+        
+          <section class="theme-post__card__license mdui-typo">
+            <span>
+              Article License: 
+              
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
+              
+            </span>
+            <br />
+            <span>Article Permalink: <a href="https://labixiaolliu.github.io/fullstack/git.html">https://labixiaolliu.github.io/fullstack/git.html</a></span>
+            
+              <br />
+              <span>Article Markdown: <a href="https://labixiaolliu.github.io/fullstack/git.htmlundefined.md">https://labixiaolliu.github.io/fullstack/git.htmlundefined.md</a></span>
+            
+          </section>
+        
+
+        
+          <section class="mdui-card-actions theme-post__card__actions">
+            
+              <button class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple  mdui-color-red" mdui-tooltip="{content: 'Buy me a beer?', position: 'right'}" mdui-dialog="{target: '#donateDialog'}">
+                <i class="mdui-icon fa fa-beer"></i>
+              </button>
+            
+            <div class="theme-spacer"></div>
+            
+            
+          </section>
+        
+
+        
+          
+            <script type="text/javascript">
+              themeRuntime.commentRest.function = function (newIdentifier, newUrl, newTitle) {
+                return
+              }
+            </script>
+          
+        
+      </article>
+      
+        <div class="mdui-color-theme theme-post__toc">
+          <html><head></head><body><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git" data-href="#git"><span class="toc-number"></span> <span class="toc-text">1. git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x516C;&#x94A5;&#x751F;&#x6210;" data-href="#&#x516C;&#x94A5;&#x751F;&#x6210;"><span class="toc-number"></span> <span class="toc-text">1.1. &#x516C;&#x94A5;&#x751F;&#x6210;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x591A;&#x516C;&#x94A5;&#x7BA1;&#x7406;" data-href="#&#x591A;&#x516C;&#x94A5;&#x7BA1;&#x7406;"><span class="toc-number"></span> <span class="toc-text">1.2. &#x591A;&#x516C;&#x94A5;&#x7BA1;&#x7406;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;" data-href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><span class="toc-number"></span> <span class="toc-text">1.3. &#x5E38;&#x7528;&#x547D;&#x4EE4;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-remote-&#x5173;&#x8054;&#x4ED3;&#x5E93;" data-href="#git-remote-&#x5173;&#x8054;&#x4ED3;&#x5E93;"><span class="toc-number"></span> <span class="toc-text">1.3.1. git remote &#x5173;&#x8054;&#x4ED3;&#x5E93;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-stash-&#x7F13;&#x5B58;&#x6587;&#x4EF6;" data-href="#git-stash-&#x7F13;&#x5B58;&#x6587;&#x4EF6;"><span class="toc-number"></span> <span class="toc-text">1.3.2. git stash &#x7F13;&#x5B58;&#x6587;&#x4EF6;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-reset-git-log-git-reflog-&#x56DE;&#x6EDA;&#x7248;&#x672C;&#x548C;&#x65E5;&#x5FD7;&#x5217;&#x8868;" data-href="#git-reset-git-log-git-reflog-&#x56DE;&#x6EDA;&#x7248;&#x672C;&#x548C;&#x65E5;&#x5FD7;&#x5217;&#x8868;"><span class="toc-number"></span> <span class="toc-text">1.3.3. git reset/git log/git reflog &#x56DE;&#x6EDA;&#x7248;&#x672C;&#x548C;&#x65E5;&#x5FD7;&#x5217;&#x8868;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-config-&#x914D;&#x7F6E;" data-href="#git-config-&#x914D;&#x7F6E;"><span class="toc-number"></span> <span class="toc-text">1.3.4. git config &#x914D;&#x7F6E;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-pull-push-fetch" data-href="#git-pull-push-fetch"><span class="toc-number"></span> <span class="toc-text">1.3.5. git pull/push/fetch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-reset" data-href="#git-reset"><span class="toc-number"></span> <span class="toc-text">1.3.6. git reset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x51B2;&#x7A81;&#x5904;&#x7406;" data-href="#&#x51B2;&#x7A81;&#x5904;&#x7406;"><span class="toc-number"></span> <span class="toc-text">1.3.7. &#x51B2;&#x7A81;&#x5904;&#x7406;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x547D;&#x4EE4;" data-href="#&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x547D;&#x4EE4;"><span class="toc-number"></span> <span class="toc-text">1.3.8. &#x5176;&#x4ED6;&#x5E38;&#x7528;&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-rebase" data-href="#git-rebase"><span class="toc-number"></span> <span class="toc-text">1.3.9. git rebase</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-flow" data-href="#git-flow"><span class="toc-number"></span> <span class="toc-text">1.4. git flow</span></a></li></ol></li></ol></body></html>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="theme-spacer"></div>
+
+  
+    <div class="mdui-color-theme theme-post__toc-fab">
+  <button class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" mdui-menu="{target: '#toc-fab-menu', fixed: true}" id="toc-fab">
+    <i class="mdui-icon material-icons">&#xe242;</i>
+  </button>
+  <ul class="mdui-menu mdui-typo theme-post__toc-fab__menu" id="toc-fab-menu" style="padding: 8px;max-height: 80%">
+    <html><head></head><body><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git" data-href="#git"><span class="toc-number"></span> <span class="toc-text">1. git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x516C;&#x94A5;&#x751F;&#x6210;" data-href="#&#x516C;&#x94A5;&#x751F;&#x6210;"><span class="toc-number"></span> <span class="toc-text">1.1. &#x516C;&#x94A5;&#x751F;&#x6210;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x591A;&#x516C;&#x94A5;&#x7BA1;&#x7406;" data-href="#&#x591A;&#x516C;&#x94A5;&#x7BA1;&#x7406;"><span class="toc-number"></span> <span class="toc-text">1.2. &#x591A;&#x516C;&#x94A5;&#x7BA1;&#x7406;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;" data-href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><span class="toc-number"></span> <span class="toc-text">1.3. &#x5E38;&#x7528;&#x547D;&#x4EE4;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-remote-&#x5173;&#x8054;&#x4ED3;&#x5E93;" data-href="#git-remote-&#x5173;&#x8054;&#x4ED3;&#x5E93;"><span class="toc-number"></span> <span class="toc-text">1.3.1. git remote &#x5173;&#x8054;&#x4ED3;&#x5E93;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-stash-&#x7F13;&#x5B58;&#x6587;&#x4EF6;" data-href="#git-stash-&#x7F13;&#x5B58;&#x6587;&#x4EF6;"><span class="toc-number"></span> <span class="toc-text">1.3.2. git stash &#x7F13;&#x5B58;&#x6587;&#x4EF6;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-reset-git-log-git-reflog-&#x56DE;&#x6EDA;&#x7248;&#x672C;&#x548C;&#x65E5;&#x5FD7;&#x5217;&#x8868;" data-href="#git-reset-git-log-git-reflog-&#x56DE;&#x6EDA;&#x7248;&#x672C;&#x548C;&#x65E5;&#x5FD7;&#x5217;&#x8868;"><span class="toc-number"></span> <span class="toc-text">1.3.3. git reset/git log/git reflog &#x56DE;&#x6EDA;&#x7248;&#x672C;&#x548C;&#x65E5;&#x5FD7;&#x5217;&#x8868;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-config-&#x914D;&#x7F6E;" data-href="#git-config-&#x914D;&#x7F6E;"><span class="toc-number"></span> <span class="toc-text">1.3.4. git config &#x914D;&#x7F6E;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-pull-push-fetch" data-href="#git-pull-push-fetch"><span class="toc-number"></span> <span class="toc-text">1.3.5. git pull/push/fetch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-reset" data-href="#git-reset"><span class="toc-number"></span> <span class="toc-text">1.3.6. git reset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x51B2;&#x7A81;&#x5904;&#x7406;" data-href="#&#x51B2;&#x7A81;&#x5904;&#x7406;"><span class="toc-number"></span> <span class="toc-text">1.3.7. &#x51B2;&#x7A81;&#x5904;&#x7406;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x547D;&#x4EE4;" data-href="#&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x547D;&#x4EE4;"><span class="toc-number"></span> <span class="toc-text">1.3.8. &#x5176;&#x4ED6;&#x5E38;&#x7528;&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-rebase" data-href="#git-rebase"><span class="toc-number"></span> <span class="toc-text">1.3.9. git rebase</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#git-flow" data-href="#git-flow"><span class="toc-number"></span> <span class="toc-text">1.4. git flow</span></a></li></ol></li></ol></body></html>
+  </ul>
+</div>
+
+  
+
+  
+
+  
+    <div class="mdui-dialog" id="donateDialog">
+      <div class="mdui-dialog-title">Buy me a beer?</div>
+      <div class="mdui-dialog-content">
+        <div class="mdui-list">
+          
+            <a href="/img/avatar.png" title="wechat" class="mdui-list-item mdui-ripple" target="_blank">
+              
+                <i class="mdui-list-item-icon mdui-icon fa fa-wechat mdui-text-center"></i>&emsp;
+              
+              
+              
+              wechat
+            </a>
+          
+            <a href="https://paypal.com" title="paypay" class="mdui-list-item mdui-ripple" target="_blank">
+              
+                <i class="mdui-list-item-icon mdui-icon fa fa-paypal mdui-text-center"></i>&emsp;
+              
+              
+              
+              paypay
+            </a>
+          
+        </div>
+      </div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple mdui-ripple" mdui-dialog-close>Cancel</button>
+      </div>
+    </div>
+  
+</div>
+<script type="text/javascript">
+  themeRuntime.scriptsMap.post = [];
+  if (document.querySelector('.theme-post__toc-fab__menu > ol') !== null && document.querySelector('.theme-post__toc > ol') !== null) {
+    tocHighlight()
+    function tocHighlight() {
+      var timer;
+      function doWork() {
+        listens.forEach(function(value, index) {
+          value[1]();
+          value[0].classList.remove("mdui-list-item-active");
+        })
+        let actionToc = (listens[listens.reduce(function(r, v, index) {
+          if (v[2] == true) {
+            return index;
+          } else return r;
+        }, undefined)] || [])[0] || listens[0][0];
+        actionToc.classList.add("mdui-list-item-active");
+        if(actionToc.getClientRects().length == 0)return;
+        showToc(actionToc);
+      }
+      function showToc(toc) {
+        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
+        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
+        let offset = 0;
+        if (offsetTop < 0) offset = offsetTop;
+        if (offsetBottom > 0) offset = offsetBottom;
+        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var now = cardToc.scrollTop;
+          var speed = (targetTop - now) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+          if (Math.abs(now - targetTop) < 1) {
+            clearInterval(timer);
+          }
+          cardToc.scrollTop = now + speed;
+        }, 30);
+      }
+      var listens = [];
+      var cardToc = document.querySelector('.theme-post__toc');
+      var links = cardToc.querySelectorAll(".theme-post__toc__content__link");
+      var toclist = document.querySelector(".theme-post__toc > ol");
+      Array.prototype.forEach.call(links, function(value, index) {
+        var id = (value.getAttribute("href") || "#").slice(1);
+        var element = document.getElementById(id);
+        listens.push([value, function() {
+          var readed = false;
+          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
+            readed = true;
+          } else {
+            readed = false;
+          }
+          listens[index][2] = readed;
+        }, false])
+      })
+      doWork();
+      window.addEventListener("scroll", doWork)
+      var listener = {
+        function:  doWork,
+        event: 'scroll',
+        el: window,
+        removed: false
+      }
+      themeRuntime.scriptsMap.post.push(listener)
+    }
+  }
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var postLastModifiedDate = 1591685989435
+    var today = (new Date()).getTime()
+    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
+    if (difference >= 100) {
+      document.querySelector('.theme-post__card__warning').style.display = 'block'
+      document.querySelector('#content-warning').textContent = difference
+    }
+  })();
+</script>
+
+<script type="text/javascript">
+  var images = document.querySelectorAll('.theme-post__card__content img')
+  for (i = 0; i < images.length; i++) {
+    //console.log('image added', i)
+    images[i].addEventListener("click", openLG);
+    var listener = {
+      function:  openLG,
+      event: 'click',
+      el: images[i],
+      removed: false
+    }
+    themeRuntime.scriptsMap.post.push(listener)
+  }
+  function openLG() {
+    var img_src = this.getAttribute('src');
+    var img_alt = this.getAttribute('alt');
+    lightGallery(this, {
+      dynamic: true,
+      counter: false,
+      dynamicEl: [{
+        "src": img_src,
+        'subHtml': "<span author>Damon Chen</span><div descr>" + img_alt + "</div>"
+      }],
+    });
+  }
+</script>
+
+
+
+
+
+
+      </div>
+    </div>
+  </main>
+
+  <div id="outdated" style="z-index: 9999;">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+  </div>
+  <!-- import js -->
+
+
+  
+<script src="/labixiaoliu.github.io/js/outdatedbrowser.min.js"></script>
+
+
+
+
+  
+    
+<script src="/labixiaoliu.github.io/js/js.pure.min.js"></script>
+
+  
+
+
+<!-- theme js -->
+<script type="text/javascript">
+  (function() {
+    var appbarTopFlag = false;
+    var appbarEl = document.querySelector('.theme-appbar');
+    function appbarShadow() {
+      var bodyScrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      if (bodyScrolled > 0 && !appbarTopFlag) {
+        appbarEl.classList.add('theme-appbar--shadow');
+        appbarTopFlag = true;
+      } else if (bodyScrolled === 0 && appbarTopFlag) {
+        appbarEl.classList.remove('theme-appbar--shadow');
+        appbarTopFlag = false;
+      }
+    }
+    appbarShadow()
+    window.addEventListener('scroll', appbarShadow);
+  })();
+  (function() {
+    function detechTheme() {
+      var modeFlag = localStorage.getItem('darkMode');
+      // true for dark mode, false for bright mode
+      if(modeFlag === "true"){
+        document.querySelector('body').classList.add('mdui-theme-layout-dark')
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#212121")
+        return true
+      } else if(!window.matchMedia) {
+          return false;
+      } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.querySelector('body').classList.add('mdui-theme-layout-dark')
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#212121")
+          return true;
+      } else if(window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.querySelector('body').classList.remove('mdui-theme-layout-dark')
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#fff")
+          return false;
+      } else {
+        return false;
+      }
+    }
+    var modeFlag = detechTheme();
+    var modeEl = document.querySelector('.theme-appbar__mode-switch');
+    function modeSwitch() {
+      if (!modeFlag) {
+        // default bright mode, switch to dark mode
+        document.querySelector('body').classList.add('mdui-theme-layout-dark');
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#212121")
+        localStorage.setItem('darkMode', true);
+        modeFlag = true;
+      } else {
+        // dark mode, switch to bright mode
+        document.querySelector('body').classList.remove('mdui-theme-layout-dark');
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#fff")
+        localStorage.setItem('darkMode', false);
+        modeFlag = false;
+      }
+    }
+    modeEl.addEventListener('click', modeSwitch);
+  })();
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+  document.querySelector('body').classList.add('theme-loaded')
+</script>
+
+
+
+
+</body>
+</html>
